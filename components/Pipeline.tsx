@@ -18,15 +18,20 @@ export default function Pipeline() {
           </h2>
         </header>
 
-        <ol className="pipeline">
-          {steps.map((s) => (
-            <li className="pipeline__step reveal" key={s.num}>
-              <span className="pipeline__num">{s.num}</span>
-              <h3>{s.title}</h3>
-              <p>{s.body}</p>
-            </li>
-          ))}
-        </ol>
+        <div className="pipeline-wrap">
+          <div className="pipeline__flow" aria-hidden="true">
+            <span className="pipeline__pulse" />
+          </div>
+          <ol className="pipeline">
+            {steps.map((s) => (
+              <li className="pipeline__step reveal" key={s.num}>
+                <span className="pipeline__num">{s.num}</span>
+                <h3>{s.title}</h3>
+                <p>{s.body}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   );

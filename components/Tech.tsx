@@ -1,3 +1,5 @@
+import EmbeddingField from "@/components/EmbeddingField";
+
 const tech = [
   "Generative AI Models",
   "Computer Vision Systems",
@@ -15,7 +17,8 @@ const tech = [
 
 export default function Tech() {
   return (
-    <section className="section section--dark" id="tech">
+    <section className="section section--dark section--field" id="tech">
+      <EmbeddingField />
       <div className="container">
         <header className="section__head reveal">
           <p className="eyebrow">Technology</p>
