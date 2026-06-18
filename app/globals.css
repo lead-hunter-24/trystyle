@@ -424,21 +424,23 @@ img { max-width: 100%; display: block; }
 @keyframes artFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
 @keyframes framePulse { 0%,100% { opacity: .45; } 50% { opacity: .85; } }
 
-/* Build card vector */
-.card__vector { width: 100%; height: 100%; object-fit: contain; }
-.card__icon { width: 64px; height: 64px; }
-.card__vector.vector--empty {
-  width: 64px; height: 64px; border: 1px dashed var(--line);
-  border-radius: 12px; aspect-ratio: auto;
+/* Icon tile — dark plate so the cream/gold/violet artwork pops on light cards */
+.card__icon, .pipeline__art {
+  display: grid; place-items: center;
+  border-radius: 18px;
+  background: radial-gradient(120% 120% at 30% 20%, #1a1a22 0%, #0c0c10 70%);
+  border: 1px solid rgba(201,163,91,.18);
+  box-shadow: 0 14px 30px -18px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.04);
 }
+.card__vector, .pipeline__vector { width: 100%; height: 100%; object-fit: contain; }
 
-/* Pipeline step vector */
-.pipeline__art { display: block; width: 64px; height: 64px; margin-bottom: 22px; }
-.pipeline__vector { width: 100%; height: 100%; object-fit: contain; }
-.pipeline__vector.vector--empty {
-  width: 64px; height: 64px; border: 1px dashed var(--line);
-  border-radius: 12px; aspect-ratio: auto;
-}
+/* Build card icon */
+.card__icon { width: 108px; height: 108px; padding: 16px; margin: 18px 0 20px; }
+.card__vector.vector--empty { width: 100%; height: 100%; border: 1px dashed rgba(201,163,91,.3); border-radius: 10px; aspect-ratio: auto; }
+
+/* Pipeline step icon */
+.pipeline__art { width: 92px; height: 92px; padding: 13px; margin-bottom: 20px; }
+.pipeline__vector.vector--empty { width: 100%; height: 100%; border: 1px dashed rgba(201,163,91,.3); border-radius: 10px; aspect-ratio: auto; }
 
 /* ---- Embedding field (vector space) ---- */
 .section--field { position: relative; overflow: hidden; }
