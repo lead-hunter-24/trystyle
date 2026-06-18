@@ -25,9 +25,11 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://trystyle.shop"),
   title: "TryStyle — The AI Operating System for Fashion Commerce",
   description:
     "TryStyle is an AI-native FashionTech platform delivering Generative AI Virtual Try-On, AI-Powered Cataloging, Personalized Recommendations, and Computer Vision-driven Fashion Intelligence at scale.",
+  alternates: { canonical: "/" },
   keywords: [
     "Generative AI",
     "Virtual Try-On",
@@ -51,6 +53,8 @@ export const metadata: Metadata = {
     description:
       "Generative AI Virtual Try-On, AI-Powered Cataloging, Personalized Recommendations, and Computer Vision-driven Fashion Intelligence.",
     type: "website",
+    url: "https://trystyle.shop",
+    siteName: "TryStyle",
   },
 };
 
