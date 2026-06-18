@@ -1,4 +1,4 @@
-import VisionStage from "@/components/VisionStage";
+import Vector from "@/components/Vector";
 
 const stats = [
   { num: 40, suffix: "%", label: "Lower return rates with try-before-you-buy confidence" },
@@ -38,7 +38,11 @@ export default function Hero() {
           </div>
 
           <div className="hero__visual reveal">
-            <VisionStage />
+            <div className="hero__art">
+              <span className="hero__art-glow" aria-hidden="true" />
+              <span className="hero__art-frame" aria-hidden="true" />
+              <Vector name="hero" alt="TryStyle AI virtual try-on" className="hero__art-img" />
+            </div>
           </div>
         </div>
 

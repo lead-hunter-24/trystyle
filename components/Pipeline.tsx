@@ -1,8 +1,10 @@
+import Vector from "@/components/Vector";
+
 const steps = [
-  { num: "A", title: "Ingest", body: "Product imagery and customer signals enter the pipeline through multimodal encoders." },
-  { num: "B", title: "Understand", body: "Vision-language models extract attributes, categories, colors, and patterns automatically." },
-  { num: "C", title: "Generate", body: "Generative models render try-on visuals, descriptions, and styling combinations." },
-  { num: "D", title: "Personalize", body: "Embeddings and vector search match each shopper with the products most likely to convert." },
+  { num: "A", vector: "pipe-ingest", title: "Ingest", body: "Product imagery and customer signals enter the pipeline through multimodal encoders." },
+  { num: "B", vector: "pipe-understand", title: "Understand", body: "Vision-language models extract attributes, categories, colors, and patterns automatically." },
+  { num: "C", vector: "pipe-generate", title: "Generate", body: "Generative models render try-on visuals, descriptions, and styling combinations." },
+  { num: "D", vector: "pipe-personalize", title: "Personalize", body: "Embeddings and vector search match each shopper with the products most likely to convert." },
 ];
 
 export default function Pipeline() {
@@ -26,6 +28,9 @@ export default function Pipeline() {
             {steps.map((s) => (
               <li className="pipeline__step reveal" key={s.num}>
                 <span className="pipeline__num">{s.num}</span>
+                <span className="pipeline__art" aria-hidden="true">
+                  <Vector name={s.vector} alt={s.title} className="pipeline__vector" />
+                </span>
                 <h3>{s.title}</h3>
                 <p>{s.body}</p>
               </li>
