@@ -28,10 +28,10 @@ export default function Pipeline() {
             {steps.map((s) => (
               <li className="pipeline__step reveal" key={s.num}>
                 <span className="pipeline__num">{s.num}</span>
+                <h3>{s.title}</h3>
                 <span className="pipeline__art" aria-hidden="true">
                   <Vector name={s.vector} alt={s.title} className="pipeline__vector" />
                 </span>
-                <h3>{s.title}</h3>
                 <p>{s.body}</p>
               </li>
             ))}

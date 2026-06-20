@@ -62,10 +62,10 @@ export default function Build() {
           {cards.map((c) => (
             <article className="card card--feature reveal" key={c.index}>
               <span className="card__index">{c.index}</span>
+              <h3>{c.title}</h3>
               <span className="card__icon" aria-hidden="true">
                 <Vector name={c.vector} alt={c.title} className="card__vector" />
               </span>
-              <h3>{c.title}</h3>
               <p>{c.body}</p>
               {c.list && (
                 <ul className="card__list">
